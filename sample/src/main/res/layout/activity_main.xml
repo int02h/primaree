@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.dpforge.primaree.sample.MainActivity"
+    tools:ignore="HardcodedText">
+
+    <Button
+        android:id="@+id/btn_run_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Run Service" />
+
+    <Button
+        android:id="@+id/btn_send_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Broadcast" />
+
+    <Button
+        android:id="@+id/btn_start_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Activity" />
+
+    <Button
+        android:id="@+id/btn_query_provider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Query Provider" />
+
+</LinearLayout>
