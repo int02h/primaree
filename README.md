@@ -1,4 +1,6 @@
 # Primaree
+[![Build Status](https://travis-ci.com/int02h/primaree.svg?branch=master)](https://travis-ci.com/int02h/primaree)
+[![Latest release](https://img.shields.io/github/release/int02h/primaree.svg)](https://github.com/int02h/primaree/releases/latest)
 
 Primaree - a simple library for safe initialization of multi-process
 Android applications.
@@ -84,7 +86,13 @@ class App : Application() {
 
 ## Download
 
-Primaree is not published to Maven Central right now. Will be done in near future.
+Add the following dependency to your `build.gradle` script:
+
+```groovy
+dependencies {
+    implementation 'com.dpforge:primaree:X.X.X'
+}
+```
 
 ## License
 
