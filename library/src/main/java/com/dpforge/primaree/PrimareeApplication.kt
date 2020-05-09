@@ -6,7 +6,7 @@ import android.content.res.Configuration
 abstract class PrimareeApplication : Application() {
 
     private val shortProcessName: String by lazy {
-        currentProcessFullName?.substring(packageName.length) ?: UNKNOWN_PROCESS_NAME
+        Primaree.currentProcessFullName?.substring(packageName.length) ?: UNKNOWN_PROCESS_NAME
     }
 
     private val isPrimaryProcessCached: Boolean by lazy { isPrimaryProcess }
