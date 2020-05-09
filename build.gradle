@@ -13,7 +13,8 @@ buildscript {
             'appcompat'     : 'androidx.appcompat:appcompat:1.1.0',
             'junit'         : 'junit:junit:4.12',
             'android_plugin': 'com.android.tools.build:gradle:3.6.1',
-            'kotlin_plugin' : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+            'kotlin_plugin' : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+            "dokka"         : 'org.jetbrains.dokka:dokka-gradle-plugin:0.10.1'
     ]
     repositories {
         google()
@@ -23,6 +24,7 @@ buildscript {
     dependencies {
         classpath deps.android_plugin
         classpath deps.kotlin_plugin
+        classpath deps.dokka
     }
 }
 
