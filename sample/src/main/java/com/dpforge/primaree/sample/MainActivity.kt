@@ -2,6 +2,7 @@ package com.dpforge.primaree.sample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.dpforge.primaree.runIfPrimaryProcess
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,6 +30,10 @@ class MainActivity : AppCompatActivity() {
             SampleContentProvider.query(
                 this@MainActivity
             )
+        }
+
+        application.runIfPrimaryProcess {
+            log("MainActivity is running in primary process")
         }
     }
 }
