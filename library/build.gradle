@@ -37,5 +37,13 @@ dependencies {
     )
 }
 
+tasks.create("updateReadmeVersion") {
+    def readmeFile = new File(rootDir, "README.md")
+    def readme = readmeFile.text
+    def oldDependency = readme.find("implementation '$GROUP:$POM_ARTIFACT_ID:(.+)'")
+    def newDependency = "implementation '$GROUP:$POM_ARTIFACT_ID:$VERSION_NAME'"
+    readmeFile.text = readme.replace(oldDependency, newDependency)
+}
+
 apply from: rootProject.file('gradle/maven-android-prepare.gradle')
 apply from: rootProject.file('gradle/maven-publish.gradle')
