@@ -3,6 +3,10 @@ package com.dpforge.primaree
 import android.app.Application
 import android.content.res.Configuration
 
+/**
+ * Base class for an application class that allows you to safely initialize your app
+ * in a multi-process environment
+ */
 abstract class PrimareeApplication : Application() {
 
     private val shortProcessName: String by lazy {
@@ -22,7 +26,16 @@ abstract class PrimareeApplication : Application() {
         }
     }
 
+    /**
+     * [onCreate] for the primary process
+     */
     abstract fun onPrimaryCreate()
+
+    /**
+     * [onCreate] for any secondary process
+     *
+     * @param name the name of the secondary process in the format it appears in AndroidManifest.xml
+     */
     open fun onSecondaryCreate(name: String) {}
 
     //endregion
@@ -38,7 +51,16 @@ abstract class PrimareeApplication : Application() {
         }
     }
 
+    /**
+     * [onConfigurationChanged] for the primary process
+     */
     open fun onPrimaryConfigurationChanged() {}
+
+    /**
+     * [onConfigurationChanged] for any secondary process
+     *
+     * @param name the name of the secondary process in the format it appears in AndroidManifest.xml
+     */
     open fun onSecondaryConfigurationChanged(name: String) {}
 
     //endregion
@@ -54,7 +76,16 @@ abstract class PrimareeApplication : Application() {
         }
     }
 
+    /**
+     * [onLowMemory] for the primary process
+     */
     open fun onPrimaryLowMemory() {}
+
+    /**
+     * [onLowMemory] for any secondary process
+     *
+     * @param name the name of the secondary process in the format it appears in AndroidManifest.xml
+     */
     open fun onSecondaryLowMemory(name: String) {}
 
     //endregion
@@ -70,7 +101,16 @@ abstract class PrimareeApplication : Application() {
         }
     }
 
+    /**
+     * [onTrimMemory] for the primary process
+     */
     open fun onPrimaryTrimMemory(level: Int) {}
+
+    /**
+     * [onTrimMemory] for any secondary process
+     *
+     * @param name the name of the secondary process in the format it appears in AndroidManifest.xml
+     */
     open fun onSecondaryTrimMemory(name: String, level: Int) {}
 
     //endregion onTrimMemory

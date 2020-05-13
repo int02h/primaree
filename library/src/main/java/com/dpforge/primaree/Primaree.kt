@@ -9,6 +9,11 @@ import java.io.FileReader
 
 object Primaree {
 
+    /**
+     * @return full name of current process
+     *
+     * Full name looks like `your.app.package:yourProcessName`
+     */
     @JvmStatic
     val currentProcessFullName: String?
         get() {
