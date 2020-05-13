@@ -9,6 +9,7 @@ import java.io.FileReader
 
 object Primaree {
 
+    @JvmStatic
     val currentProcessFullName: String?
         get() {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
