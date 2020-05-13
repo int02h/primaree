@@ -1,4 +1,5 @@
 @file:Suppress("unused")
+@file:JvmName("ApplicationExtensions")
 
 package com.dpforge.primaree
 
