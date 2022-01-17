@@ -21,9 +21,8 @@ android {
 
 }
 
-dokka {
-    outputFormat = 'html'
-    outputDirectory = "$buildDir/dokka"
+dokkaHtml {
+    outputDirectory.set(new File(buildDir, 'dokka'))
 }
 
 dependencies {
