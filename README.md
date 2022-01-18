@@ -1,5 +1,5 @@
 # Primaree
-[![Build Status](https://travis-ci.com/int02h/primaree.svg?branch=master)](https://travis-ci.com/int02h/primaree)
+[![Build Status](https://travis-ci.com/int02h/primaree.svg?branch=master)](https://travis-ci.com/github/int02h/primaree)
 [![Latest release](https://img.shields.io/github/release/int02h/primaree.svg)](https://github.com/int02h/primaree/releases/latest)
 
 Primaree - a simple library for safe initialization of multi-process
