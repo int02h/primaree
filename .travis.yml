@@ -1,13 +1,21 @@
 language: android
+os: linux
+jdk:
+  - openjdk11
 dist: trusty
 android:
   components:
-    - build-tools-29.0.3
-    - android-29
+    - build-tools-32.0.0
+    - android-31
+  licenses:
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
 before_install:
-  - yes | sdkmanager "platforms;android-28" # https://travis-ci.community/t/unable-to-specify-build-tools-29-0-3-and-accept-license-sdk-29/8404
-  - yes | sdkmanager "platforms;android-29"
-  - yes | sdkmanager "build-tools;29.0.3"
+  - touch $HOME/.android/repositories.cfg
+  - wget "https://dl.google.com/android/repository/commandlinetools-linux-7302050_latest.zip" -O commandlinetools.zip
+  - unzip commandlinetools.zip -d $ANDROID_HOME/
+  - yes | $ANDROID_HOME/cmdline-tools/bin/sdkmanager "platforms;android-31" --sdk_root=$ANDROID_HOME
+  - yes | $ANDROID_HOME/cmdline-tools/bin/sdkmanager "build-tools;32.0.0" --sdk_root=$ANDROID_HOME
 script:
   - ./gradlew check
 before_cache:
