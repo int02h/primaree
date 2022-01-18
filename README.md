@@ -90,7 +90,7 @@ Add the following dependency to your `build.gradle` script:
 
 ```groovy
 dependencies {
-    implementation 'com.dpforge:primaree:1.2.0'
+    implementation 'com.dpforge:primaree:1.2.1'
 }
 ```
 
